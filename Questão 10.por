@@ -11,6 +11,6 @@ programa {
     escreva("Defina d: ")
     leia(d)
     det = (a * d) - (b * c)
-    escreva("O VALOR DO DETERMINANTE É = ",mat.arredondar(det,2))
+    escreva("O VALOR DO DETERMINANTE É = ",mat.arredondar(det,2),"\n")
   }
 }
