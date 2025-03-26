@@ -11,8 +11,7 @@ programa {
    leia(f) 
    vetor[c] = (5/9) * ( f - 32 )}
     para(c = 0; c < n1; c = c + 1) {
-      escreva("Temperatura ", c + 1, ": ", mat.arredondar(vetor[c],2), "\n")
+      escreva( vetor[c]*9/5+32, " FAHRENHEIT EQUIVALE " , mat.arredondar(vetor[c],2), " Celsius", "\n")
   }
-  
   }
 }
