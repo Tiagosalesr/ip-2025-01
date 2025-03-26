@@ -13,5 +13,6 @@ programa {
     para(c = 0; c < n1; c = c + 1) {
       escreva("Temperatura ", c + 1, ": ", mat.arredondar(vetor[c],2), "\n")
   }
+  
   }
 }
