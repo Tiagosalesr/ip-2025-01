@@ -1,0 +1,10 @@
+programa {
+  funcao inicio() {
+    inteiro i, a1, razao, numeroElementos 
+    leia(a1, razao, numeroElementos)  
+   real vetor[numeroElementos]
+    para (i=0; i < numeroElementos; i++) {vetor[i] = (vetor[i]) + (a1 + (razao * i))}
+  
+  para (i=0; i < numeroElementos; i++) {escreva(vetor[i])}
+}
+}
