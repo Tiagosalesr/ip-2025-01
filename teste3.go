@@ -10,5 +10,5 @@ func main () {
 		fmt.Println(i)
 		soma = soma + i
 	}
-	fmt.Println(soma)
+	fmt.Println("A soma é: ",soma)
 }
