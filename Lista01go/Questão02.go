@@ -5,35 +5,34 @@ import (
 )
 
 func main() {
-	var t int
-	fmt.Scan(&t)
+	var (
+		jogos int
+		pubtot, popular, geral, arquibancada, cadeiras float32
+	)
+	receita := [4]float32{}
+	receitatot := [3]float32{}
 
-	valoresIngressos := map[string]float64{
-		"Popular":     1.00,
-		"Geral":       5.00,
-		"Arquibancada": 10.00,
-		"Cadeiras":    20.00,
-	}
+	fmt.Print("São quantos jogos? ")
+	fmt.Scanln(&jogos)
 
 
-	for i := 1; i <= t; i++ {
-		
-		var totalPessoas, percPopular, percGeral, percArquibancada, percCadeiras int
-		fmt.Scan(&totalPessoas, &percPopular, &percGeral, &percArquibancada, &percCadeiras)
+	for i:= 0; i<= jogos - 1; i++ {
 
-		
-		numPopular := float64(totalPessoas * percPopular) / 100
-		numGeral := float64(totalPessoas * percGeral) / 100
-		numArquibancada := float64(totalPessoas * percArquibancada) / 100
-		numCadeiras := float64(totalPessoas * percCadeiras) / 100
+	fmt.Print("Digite: O número de pessoas que compraram ingresso para o jogo N.", i+1,
+		  ", a percentagem de pessoas que compraram ingresso na categoria Popular do jogo N.", i+1,
+		  ", a percentagem de pessoas que compraram ingresso na categoria Geral do jogo N.", i+1,
+		  ", a percentagem de pessoas que compraram ingresso na categoria Arquibancada do jogo N.", i+1 , 
+		  " e ", "a percentagem de pessoas que compraram ingresso na categoria Cadeiras do jogo N.", i+1,": " )
+	fmt.Scanln(&pubtot,&popular,&geral,&arquibancada,&cadeiras)
 
-		
-		renda := (numPopular * valoresIngressos["Popular"]) +
-			(numGeral * valoresIngressos["Geral"]) +
-			(numArquibancada * valoresIngressos["Arquibancada"]) +
-			(numCadeiras * valoresIngressos["Cadeiras"])
+	receita[0] = pubtot * (popular/100) * 1
+       	receita[1] = pubtot * (geral/100) * 5
+       	receita[2] = pubtot * (arquibancada/100) * 10
+       	receita[3] = pubtot * (cadeiras/100) * 20
 
-		
-		fmt.Printf("A RENDA DO JOGO N. %d E = %.2f\n", i, renda)
-	}
+		receitatot[i] = receita[0] + receita[1] + receita[2] + receita[3]
+}
+for i:= 0; i < jogos; i++ {
+	fmt.Printf("A RENDA DO JOGO N. %d É DE: R$ %.2f\n", i+1, receitatot[i])
+}
 }
