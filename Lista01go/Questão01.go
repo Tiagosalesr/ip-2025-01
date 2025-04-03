@@ -1,15 +1,21 @@
 package main
-import "fmt"
+
+import (
+	"fmt"
+)
+
 func main() {
-	var nota1, nota2, nota3 float64
-	fmt.Scanln(&nota1)
-	fmt.Scanln(&nota2)
-	fmt.Scanln(&nota3)
-	media := (nota1 + nota2 + nota3) / 3
-	fmt.Printf("MEDIA = %.2f\n", media)
-	if media >= 6 {
-		fmt.Println("APROVADO")
-	} else {
-		fmt.Println("REPROVADO")
-	}
-	}
+	var n1, n2, n3 int
+
+	fmt.Scanln(&n1)
+    fmt.Scanln(&n2)
+	fmt.Scanln(&n3)
+   if (n1 <= 9 && n1 >= 0 && n2 <= 9 && n2 >= 0 && n3 <= 9 && n3 >= 0 ) {
+	numeroFinal := (n1 * 100) + (n2 * 10) + n3
+	fmt.Println(numeroFinal,",", numeroFinal * numeroFinal)
+   } else {
+   fmt.Println("DIGITO INVALIDO")
+   }
+
+
+}
