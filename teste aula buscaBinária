@@ -1,0 +1,37 @@
+package main
+
+import "fmt"
+
+func main() {
+	var n1, n2 int
+	fmt.Println("Busca binaria...")
+	fmt.Print("Digite o tamanho da lista: ")
+	fmt.Scan(&n1)
+	var list = make([] int, n1)
+	for i := 0; i < n1; i++ {
+	list[i] = i
+	}
+	fmt.Print("Digite o elemento: ")
+	fmt.Scan(&n2)
+	posicao := buscaBinaria(list, n2)
+	fmt.Println(posicao)
+	
+}
+func buscaBinaria(list []int, alvo int) int {
+	esquerdo := 0
+	direito := len(list) - 1
+	for esquerdo <= direito {
+		meio := (direito + esquerdo) / 2
+		elem_meio := list[meio]
+		if elem_meio == alvo {
+			return meio
+		}
+		if elem_meio > alvo {
+			direito = meio - 1
+		}
+		if elem_meio < alvo {
+			esquerdo = meio + 1
+		}
+	}
+	return -1
+}
