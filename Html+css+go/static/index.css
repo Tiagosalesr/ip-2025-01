@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+}
+
+header img{
+    width: 60px;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(47, 96, 204);
+    color: rgb(245, 245, 245);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    font-size: small;
+    height: fit-content;
+}
+
+header>h1{
+    display: flex;
+    align-items: space-around;
+}
+
+#links{
+    margin-left: 15px;
+}
+
+#Sobre{
+    background-color:  rgb(47, 96, 204);
+    color: rgb(248, 252, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    display: grid;
+    padding: 8px;
+   
+}
+
+#Sobre pre{
+    justify-self: left;
+}
+
+#Sobre {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin: 35px;
+}
+
+#Sobre img {
+    width: 100px;
+    height: 120px;
+    
+}
+
+#Sobre>pre{
+    display: flex;
+    align-items: center;
+ }
+ 
+ #Projetos{
+    background-color: rgb(47, 96, 204);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    border-radius: 10px;
+    margin: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+ }
+
+ #Contato{
+    background-color: rgb(98, 114, 150) ;
+    color: rgb(32, 49, 35);
+    display: grid;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 60px;
+    width: 30%;
+    margin: auto;
+ }
+
+ footer{
+    background-color: black;
+    color: aliceblue;
+    display: grid;
+    justify-content: center;
+    margin-top: 60px;
+ }
+
+ a {
+    color: rgb(13, 22, 155);
+ }
+
+ main {
+    min-width: 320px;
+    max-width: 1400px;
+    margin: auto;
+ }
